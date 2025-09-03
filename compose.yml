@@ -26,6 +26,7 @@ services:
       TZ: Asia/Tokyo
     volumes:
       - mysql:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
     command: >
       mysqld
       --character-set-server=utf8mb4
